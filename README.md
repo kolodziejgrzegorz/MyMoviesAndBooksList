@@ -23,23 +23,23 @@ Simple JavaFx app to store list of movies and books in H2 database. It uses an i
 3. Hit run button
 
 To change language go to Main class and uncomment
- > Locale.setDefault(new Locale("pl")); -> for polish
+ > Locale.setDefault(new Locale("pl")); -> for polish <br>
  > Locale.setDefault(new Locale("en")); -> for english
 
 ## Features:
 
--show table of books stored in database with information like author, category, title, description, etc.
--show table of authors with name and surname
--show table of categories with name and list of books
--add/delete/edit books, authors and categories
--store date in H2 database
--change language english <-> polish
--two styles Caspian and Modena
--option to show app always on top
--show table of movies stored in database with information like director, genre, title, storyline, etc.
--show table of directors with name and surname
--show table of genres with name and list of movies
--add/delete/edit movies, directors and genres
+-show table of books stored in database with information like author, category, title, description, etc.<br>
+-show table of authors with name and surname<br>
+-show table of categories with name and list of books<br>
+-add/delete/edit books, authors and categories<br>
+-store date in H2 database<br>
+-change language english <-> polish<br>
+-two styles Caspian and Modena<br>
+-option to show app always on top<br>
+-show table of movies stored in database with information like director, genre, title, storyline, etc.<br>
+-show table of directors with name and surname<br>
+-show table of genres with name and list of movies<br>
+-add/delete/edit movies, directors and genres<br>
 
 ## Inspiration
 This app is basen on JavaFx course from
