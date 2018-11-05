@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<HBox fx:controller="pl.list.BooksAndMovies.controllers.BookController"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets left="10" right="10" top="10" bottom="10"/>
+    </padding>
+    <GridPane vgap="10" hgap="20" alignment="CENTER" >
+        <Label text="%author.book" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="authorCombobox" GridPane.rowIndex="0" GridPane.columnIndex="1"></ComboBox>
+        <Label text="%category.book" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="categoryCombobox" GridPane.rowIndex="1" GridPane.columnIndex="1"></ComboBox>
+        <Label text="%title.book" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="titleTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="%description.book" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextArea fx:id="descriptionTextArea" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="%rating.book" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Slider fx:id="ratingSlider" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                min="1" max="5" value="1"
+                showTickMarks="true" showTickLabels="true" majorTickUnit="1" minorTickCount="9" snapToTicks="true"/>
+        <Label text="%release.date.book" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <DatePicker  fx:id="releaseDatePicker" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        <Label text="%read.book" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="readCombobox" GridPane.rowIndex="6" GridPane.columnIndex="1"></CheckBox>
+        <Button fx:id="addBookButton" text="%save.button" GridPane.rowIndex="7" GridPane.columnIndex="1" onAction="#addBookAction"/>
+    </GridPane>
+
+</HBox>

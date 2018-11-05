@@ -1,0 +1,5 @@
+pl\list\BooksAndMovies\controllers\MainController.class
+pl\list\BooksAndMovies\Main.class
+pl\list\BooksAndMovies\controllers\TopMenuButtonsController.class
+pl\list\BooksAndMovies\utils\FxmlUtils.class
+pl\list\BooksAndMovies\utils\DialogsUtils.class

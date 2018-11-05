@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="pl.list.BooksAndMovies.controllers.MainController"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="700.0" fx:id="borderPaneMain">
+
+    <top>
+        <VBox prefHeight="100" prefWidth="300" BorderPane.alignment="CENTER">
+            <MenuBar>
+                <Menu text="%file">
+                    <MenuItem text="%close" onAction="#handleExit" />
+                </Menu>
+                <Menu text="%edit">
+                    <fx:define>
+                        <ToggleGroup fx:id="styleGroup"/>
+                    </fx:define>
+                    <RadioMenuItem text="%caspian" onAction="#handleCaspianStyle" toggleGroup="$styleGroup"/>
+                    <RadioMenuItem text="%modena" onAction="#handleMadenaStyle" toggleGroup="$styleGroup" selected="true"/>
+                    <SeparatorMenuItem/>
+                    <CheckMenuItem text="%alwaysOnTop" onAction="#handleAlwaysOnTop"/>
+                </Menu>
+                <Menu text="%help">
+                    <MenuItem text="%about" onAction="#handleAbout"/>
+                </Menu>
+            </MenuBar>
+            <fx:include source="TopMenuButtons.fxml" fx:id="topMenuButtons"/>
+        </VBox>
+    </top>
+
+</BorderPane>

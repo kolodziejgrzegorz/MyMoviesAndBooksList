@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="pl.list.BooksAndMovies.controllers.CategoryController"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="10" >
+
+    <HBox spacing="20" alignment="CENTER">
+        <padding>
+            <Insets bottom="0"/>
+            <Insets right="10"/>
+            <Insets left="10"/>
+            <Insets top="10"/>
+        </padding>
+
+        <Label text="%add.category" />
+        <TextField fx:id="addCategoryTextField" />
+        <Button fx:id="addCategoryButton" text="%add.button" onAction="#addCategoryAction"/>
+        <Label text="%choose.category" />
+        <ComboBox fx:id="categoryComboBox" onAction="#comboboxOnAction">
+
+        </ComboBox>
+        <Button fx:id="editCategoryButton" text="%edit.button" onAction="#editCategoryAction" />
+        <Button fx:id="deleteCategoryButton" text="%delete.button" onAction="#deleteCategoryAction" />
+    </HBox>
+
+    <TreeView fx:id="categoryTreeView" showRoot="false">
+
+    </TreeView>
+</VBox>

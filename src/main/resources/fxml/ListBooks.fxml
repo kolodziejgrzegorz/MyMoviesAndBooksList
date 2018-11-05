@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="pl.list.BooksAndMovies.controllers.ListBooksController"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="10">
+    <padding>
+        <Insets left="10" right="10" top="10" bottom="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label text="%category.book" />
+        <ComboBox fx:id="categoryComboBox" prefWidth="100" onAction="#filterOnActionComboBox"/>
+        <Button text="X" onAction="#clearCategoryComboBox"/>
+        <Label text="%author.book" />
+        <ComboBox fx:id="authorComboBox" prefWidth="100" onAction="#filterOnActionComboBox"/>
+        <Button text="X" onAction="#clearAuthorComboBox"/>
+    </HBox>
+    <TableView fx:id="bookTableView">
+        <columns>
+            <TableColumn text="%title.book" fx:id="titleColumn" />
+            <TableColumn text="%description.book" fx:id="descriptionColumn"/>
+            <TableColumn text="%author.book" fx:id="authorColumn"/>
+            <TableColumn text="%category.book" fx:id="categoryColumn"/>
+            <TableColumn text="%rating.book" fx:id="ratingColumn"/>
+            <TableColumn text="%read.book" fx:id="readColumn"/>
+            <TableColumn text="%release.date.book" fx:id="releaseDateColumn"/>
+            <TableColumn text="%delete.button" fx:id="deleteColumn" />
+            <TableColumn text="%edit.button" fx:id="editColumn" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+
+
+    </TableView>
+</VBox>

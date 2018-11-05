@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pl.list.BooksAndMovies.controllers.TopMenuButtonsController"
+      prefHeight="400.0" prefWidth="600.0" spacing="10">
+
+    <fx:define>
+        <ToggleGroup fx:id="topButtons" />
+    </fx:define>
+    <ToggleButton text="%list.movies" onAction="#openMoviesList" toggleGroup="$topButtons" prefWidth="100" prefHeight="60"/>
+    <ToggleButton text="%list.series" onAction="#openSeriesList" toggleGroup="$topButtons" prefWidth="100" prefHeight="60"/>
+    <ToggleButton text="%list.books" onAction="#openBooksList" toggleGroup="$topButtons" prefWidth="100" prefHeight="60"/>
+    <Button text="%list.add" onAction="#addNew" prefWidth="100" prefHeight="60"/>
+    <Button text="%add.category" onAction="#openAddCategory" prefWidth="100" prefHeight="60"/>
+    <Button text="%add.author" onAction="#openAddAuthor" prefWidth="100" prefHeight="60"/>
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+</HBox>
